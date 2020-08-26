@@ -12,4 +12,4 @@ g++ -c CCustomSolver/CCustomSolver.cpp -I. -fPIC -Wall -Werror
 g++ -shared -o libs/libCCustomSolvers.so CCustomSolver.o
 
 # Link main program with standard solvers only
-g++ -o main main.cpp -Wl,-rpath=./libs -L./libs -ldl -lCSolvers
+g++ -o main main.cpp -Wl,-rpath=./libs -I. -L./libs -ldl -lCSolvers

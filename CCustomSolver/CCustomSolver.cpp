@@ -4,5 +4,4 @@
 // Static Variables initialization
 string CCustomSolver::ClassName = "CCustomSolver";
 // Declare templated class
-CSolver::registerFromStringCtorToMap<CCustomSolver>
-    registerCCustomSolverFromStringCtorToCSolverMap;
+registerConstructorToParent(FromString, CSolver, CCustomSolver);
